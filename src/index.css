@@ -1,1 +1,5 @@
 @import './assets/reset.css';
+body{
+    background-color: #141625;
+    overflow-x: hidden;
+}
