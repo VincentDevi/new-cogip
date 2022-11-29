@@ -1,5 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { CardCollection } from "../CardCollection/CardCollection";
+import { InvoiceCard } from "./InvoiceCard/InvoiceCard";
 import { InvoicesOption } from "./InvoicesOption/InvoicesOption";
 import { NoInvoice } from "./NoInvoice/NoInvoice";
 
@@ -21,6 +23,8 @@ export const AllInvoices = () =>{
         <div className={style.section}>
             <InvoicesOption/>
             {/* <NoInvoice/> */}
+            {/* <InvoiceCard/> */}
+            <CardCollection/>
         </div>
     );
 }
