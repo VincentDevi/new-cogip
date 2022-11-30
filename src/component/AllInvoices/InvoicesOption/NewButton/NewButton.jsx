@@ -8,33 +8,47 @@ const useStyle = createUseStyles({
         backgroundColor:'#7C5DFA',
         display:'flex',
         alignItems:'center',
-        justifyContent:'space-evenly',
+        justifyContent:'center',
         borderRadius:'5rem',
         cursor:'pointer',
+    },
+    section:{
+        height:'100%',
+        width:'40%',
+        display:'flex',
+        alignItems:'center',
     },
     container:{
         backgroundColor:'#F8F8FB',
         borderRadius: '5rem',
-        width:'20px',
-        height:'20px',
+        width:'80%',
+        maxHeight:'80%',
+        aspectRatio:'1/1',
         display:'flex',
         alignItems:'center',
         justifyContent:'center',
     },
     image:{
-        width:'100%',
-        height:'auto',
+        width:'55%',
+        aspectRatio:'1/1',
     },
     text:{
-        fontSize:'.7rem'
+        width:'50%',
+        fontSize:'.7rem',
     },
     '@media (min-width: 640px)':{
         button:{
-            height:'50px',
+            height:'48px',
+            maxWidth:'150px',
         },
         container:{
-            width:'30px',
-            height:'30px',
+            width:'50%',
+            maxHeight:'80%',
+            aspectRatio:'1/1'
+        },
+        image:{
+            width:'40%',
+            aspectRatio:'1/1',
         },
         text:{
             fontWeight:'700',
@@ -46,8 +60,10 @@ export const NewButton = () =>{
     const style = useStyle();
     return (
         <div className={style.button}>
-            <div className={style.container}>
-                <img src="public/icon-plus.svg" alt="+" />
+            <div className={style.section}>
+                <div className={style.container}>
+                    <img className={style.image} src="public/icon-plus.svg" alt="+" />
+                </div>
             </div>
             <p className={style.text}>new</p>
         </div>

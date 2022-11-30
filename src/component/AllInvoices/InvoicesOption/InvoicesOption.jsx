@@ -21,8 +21,9 @@ const useStyle= createUseStyles({
     button:{
         width:'50%',
         display:'flex',
+        justifyContent:'flex-end',
         alignItems:'center',
-        justifyContent:'space-between',
+        gap:'1rem'
     },
     '@media(min-width:640px)':{
         section:{

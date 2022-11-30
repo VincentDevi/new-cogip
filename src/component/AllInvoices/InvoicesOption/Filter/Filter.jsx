@@ -3,25 +3,29 @@ import { createUseStyles } from "react-jss";
 
 const useStyle = createUseStyles({
     section:{
-        width:'5O%',
+        width:'10O%',
         display:'flex',
-        justifyContent:'space-evenly',
         gap:'.5rem',
     },
     text:{
         fontSize:'.7rem',
         cursor:'pointer',
+        width:'50%',
     },
     container:{
+        width:'50%',
         cursor:'pointer',
         display:'flex',
         justifyContent:'center',
         alignItems:'center'
     },
-    image:{},
+    image:{
+        maxWidth:'10px',
+        width:'100%',
+        height:'auto',
+    },
     '@media (min-width:640px)':{
         section:{
-            justifyContent:'space-between',
         },
         text:{
             fontWeight:'700',
