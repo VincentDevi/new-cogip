@@ -5,6 +5,7 @@ import { InvoiceStatus } from "../InvoiceStatus/InvoiceStatus";
 import { InvoiceFrom } from "../InvoiceFrom/InvoiceFrom";
 import { InvoiceTo } from "../AllInvoices/InvoiceTo/InvoiceTo";
 import { InvoiceFooter } from "../invoiceFooter/InvoiceFooter";
+import { TotalAmount } from "../TotalAmount/TotalAmount";
 
 
 const useStyle = createUseStyles({
@@ -15,13 +16,18 @@ const useStyle = createUseStyles({
         flexDirection:'column',
         alignItems:'center',
         justifyContent:'center',
+        color:'#F8F8FB',
     },
     invoice:{
         backgroundColor:'#1E2139',
         width:'90vw',
-        height:'695px',
+        height:'80vh',
         borderRadius:'.4rem',
         marginBottom:'3rem',
+        display:'flex',
+        flexDirection:'column',
+        alignItems:'center',
+        gap:'1rem',
     }
 });
 export const InvoiceData = () =>{
@@ -33,6 +39,7 @@ export const InvoiceData = () =>{
             <div className={style.invoice}>
                 <InvoiceFrom/>
                 <InvoiceTo/>
+                <TotalAmount/>
             </div>
             <InvoiceFooter/>
         </div>
