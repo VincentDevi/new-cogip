@@ -1,6 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { StatusButton } from "../AllInvoices/InvoiceCard/StatusButton/StatusButton";
+import { CudButton } from "../CudButton/CudButton";
 
 const useStyle= createUseStyles({
     content:{
@@ -22,18 +23,49 @@ const useStyle= createUseStyles({
     },
     text:{
         fontSize:'.7rem',
-        color:'#F8F8FB',
+        color:'#858BB2',
     },
+    cud:{
+        display:'none',
+    },
+    '@media (min-width: 640px)':{
+        main:{
+            
+        },
+        section:{
+            width:'40%',
+            justifyContent:'flex-start',
+            gap:'1.5rem',
+        },
+        text:{
+            fontSize:'1rem',
+        },
+        cud:{
+            width:'50%',
+            display:'flex',
+        }
+    },
+    '@media (min-width: 1024px)':{
+        content:{
+            width:'50vw',
+        }
+    }
 });
 
 export const InvoiceStatus = () =>{
     const style = useStyle();
+
     return (
         <div className={style.content}>
             <div className={style.section}>
                 <p className={style.text}>status</p>
                 <StatusButton/>
             </div>
-        </div>
+            <div className={style.cud}>
+                <CudButton/>
+            </div>
+    </div>
     );
 }
+
+

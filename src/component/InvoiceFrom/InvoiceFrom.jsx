@@ -28,6 +28,20 @@ const useStyle = createUseStyles({
     reference:{
         fontWeight:'700',
     },
+    '@media (min-width:640px)':{
+        main:{
+            fontSize:'1rem',
+            flexDirection:'row',
+        },
+        ref:{
+            height:'80%',
+            gap:'1rem',
+        },
+        address:{
+            alignItems:'flex-end',
+            justifyContent:'flex-start',
+        },
+    },
 });
 export const InvoiceFrom = () =>{
     const style = useStyle();

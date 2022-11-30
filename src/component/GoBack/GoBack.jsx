@@ -13,7 +13,7 @@ const useStyle = createUseStyles({
         width:'30%',
         display:'flex',
         alignItems:'center',
-        justifyContent:'space-between'
+        gap:'1.5rem'
     },
     container:{
         width:'7%',
@@ -32,6 +32,14 @@ const useStyle = createUseStyles({
         fontSize:'.7rem',
         fontWeight:'600',
     },
+    '@media (min-width:640px)':{
+        section:{
+            width:'20%',
+        },
+        text:{
+            fontSize:'1rem',
+        },
+    }
 });
 export const GoBack = () =>{
     const style = useStyle();

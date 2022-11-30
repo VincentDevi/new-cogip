@@ -53,7 +53,29 @@ const useStyle = createUseStyles({
         display:'flex',
         flexDirection:'column',
         gap:'.5rem'
-    }
+    },
+    '@media (min-width: 640px)':{
+        main:{
+            height:'25%',
+            display:'flex',
+        },
+        emailDiv:{
+            width:'40%',
+        },
+        to:{
+            width:'60%',
+            fontSize:'1rem',
+        },
+        name:{
+            fontSize: '1.2rem',
+        },
+        emailTitle:{
+            fontSize:'1rem',
+        },
+        emailAdd:{
+            fontSize:'1.2rem',
+        },
+    },
 });
 export const InvoiceTo = () =>{
     const style = useStyle();

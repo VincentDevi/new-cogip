@@ -11,7 +11,6 @@ const useStyle=createUseStyles({
         alignItems:'center',
         justifyContent:'center',
         borderRadius:'1.5rem',
-        fontSize:'.7rem',
         cursor:'pointer',
     },
     edit:{
@@ -23,7 +22,6 @@ const useStyle=createUseStyles({
         alignItems:'center',
         justifyContent:'center',
         borderRadius:'1.5rem',
-        fontSize:'.7rem',
         cursor:'pointer',
     },
     paid:{
@@ -35,7 +33,6 @@ const useStyle=createUseStyles({
         alignItems:'center',
         justifyContent:'center',
         borderRadius:'1.5rem',
-        fontSize:'.7rem',
         cursor:'pointer',
     }
 });

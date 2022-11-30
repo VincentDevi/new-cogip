@@ -17,6 +17,14 @@ const useStyle = createUseStyles({
         fontSize:'.8rem',
         fontWeight:'900'
     },
+    '@media (min-width:640px)':{
+        main:{
+            fontSize:'1rem',
+        },
+        date:{
+            fontSize:'1.2rem',
+        },
+    }
 });
 
 export const InvoiceToData = ({title,date}) =>{

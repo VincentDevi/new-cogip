@@ -18,30 +18,50 @@ const useStyle = createUseStyles({
         justifyContent:'center',
         color:'#F8F8FB',
     },
+    content:{
+        width:'100%',
+        display:'flex',
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'center',
+    },
     invoice:{
         backgroundColor:'#1E2139',
         width:'90vw',
         height:'80vh',
+        maxHeight:'695px',
         borderRadius:'.4rem',
         marginBottom:'3rem',
         display:'flex',
         flexDirection:'column',
         alignItems:'center',
         gap:'1rem',
+    },
+    '@media (min-width:1024px)':{
+        main:{
+
+        },
+        content:{
+        },
+        invoice:{
+            width:'50vw',
+        }
     }
 });
 export const InvoiceData = () =>{
     const style = useStyle();
     return (
         <div className={style.main}>
-            <GoBack/>
-            <InvoiceStatus/>
-            <div className={style.invoice}>
-                <InvoiceFrom/>
-                <InvoiceTo/>
-                <TotalAmount/>
+            <div className={style.content}>
+                <GoBack/>
+                <InvoiceStatus/>
+                <div className={style.invoice}>
+                    <InvoiceFrom/>
+                    <InvoiceTo/>
+                    <TotalAmount/>
+                </div>
+                <InvoiceFooter/>
             </div>
-            <InvoiceFooter/>
         </div>
     );
 }

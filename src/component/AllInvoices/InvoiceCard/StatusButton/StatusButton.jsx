@@ -27,6 +27,9 @@ const useStyle = createUseStyles({
         button:{
             alignSelf:'center',
         },
+        text:{
+            fontSize:'1rem',
+        },
     }
 });
 

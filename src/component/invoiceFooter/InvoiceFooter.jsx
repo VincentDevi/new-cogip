@@ -10,7 +10,12 @@ const useStyle= createUseStyles({
         display:'flex',
         alignItems:'center',
         justifyContent:'center',
-    }
+    },
+    '@media (min-width:640px)':{
+        footer:{
+            display:'none',
+        },
+    },
 });
 
 export const InvoiceFooter = () =>{
