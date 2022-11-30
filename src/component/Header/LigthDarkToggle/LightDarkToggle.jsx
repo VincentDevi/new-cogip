@@ -7,22 +7,25 @@ const useStyle = createUseStyles({
         justifyContent:'center',
         alignItems:'center',
         cursor:'pointer', 
-        width:'50%',
-        maxWidth: '80px',
+        width:'40%',
     },
     image:{ 
-        maxWidth: '40px',
+        maxWidth:'30px',
         width:'100%',
         height:'auto',
+    },
+    '@media(min-width:640px)':{
+        container:{
+            width:'25%',
+        },
     }
-
 })
 export const LightDarkToggle = () =>{
     const style = useStyle();
 
     return (
         <div className={style.container}>
-            <img className={style.container} src="public/icon-sun.svg" alt="light" />
+            <img className={style.image} src="public/icon-sun.svg" alt="light" />
         </div>
     );
 }
