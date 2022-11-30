@@ -12,7 +12,7 @@ const useStyle= createUseStyles({
         fontSize:'0.7rem',
     },
     title:{
-
+        fontWeight:'900',
     },
     '@media (min-width:640px)':{
         text:{

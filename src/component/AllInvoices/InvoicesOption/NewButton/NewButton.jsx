@@ -38,7 +38,7 @@ const useStyle = createUseStyles({
     },
     '@media (min-width: 640px)':{
         button:{
-            height:'48px',
+            height:'40px',
             maxWidth:'150px',
         },
         container:{

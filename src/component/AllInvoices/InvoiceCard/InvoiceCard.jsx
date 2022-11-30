@@ -93,6 +93,11 @@ const useStyle = createUseStyles({
             width:'20%',
             order:'4',
         },
+    },
+    '@media(min-width:1024px)':{
+        main:{
+            width:'45vw',
+        },
     }
 })
 

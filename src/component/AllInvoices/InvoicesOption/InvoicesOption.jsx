@@ -29,6 +29,11 @@ const useStyle= createUseStyles({
         section:{
             width:'90vw',
         },
+    },
+    '@media(min-width:1024px)':{
+        section:{
+            width:'45vw',
+        },
     }
 })
 export const InvoicesOption = () =>{

@@ -48,12 +48,39 @@ const useStyle = createUseStyles({
     '@media(min-width:640px)':{
         logo:{
             width:'10%',
+            height:'100%',
         },
         prof:{
             width:'20%',
         },
         toggle:{
             width:'15%',
+        },
+    },
+    '@media (min-width:1024px)':{
+        header:{
+            position:'fixed',
+            flexDirection:'column',
+            height:'100vh',
+            width:'5vw',
+        },
+        logo:{
+            width:'100%',
+            height:'10%',
+        },
+        mode:{
+            height:'20%',
+            flexDirection:'column',
+        },
+        toggle:{
+            width:'5vw',
+            height:'50%',
+        },
+        prof:{
+            width:'5vw',
+            height:'50%',
+            borderTop: '2px solid #494E6E',
+            borderLeft:'none',
         },
     }
 }) 

@@ -20,7 +20,12 @@ const useStyle = createUseStyles({
         container:{
             width:'35%',
         },
-    }
+    },
+    '@media (min-width:1024px)':{
+        container:{
+            width:'50%',
+        },
+    },
 })
 
 export const Profil = () =>{

@@ -7,7 +7,7 @@ export const CardCollection = () =>{
     return (
         <>
         {array.map((index,item)=>{
-            return <InvoiceCard/>
+            return <InvoiceCard key={index}/>
         })}
         </>
     );

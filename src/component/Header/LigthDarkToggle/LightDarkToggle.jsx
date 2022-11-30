@@ -18,7 +18,12 @@ const useStyle = createUseStyles({
         container:{
             width:'25%',
         },
-    }
+    },
+    '@media (min-width:1024px)':{
+        container:{
+            width:'35%',
+        },
+    },
 })
 export const LightDarkToggle = () =>{
     const style = useStyle();
