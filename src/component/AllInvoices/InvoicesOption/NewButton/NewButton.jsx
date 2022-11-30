@@ -24,6 +24,19 @@ const useStyle = createUseStyles({
     image:{},
     text:{
         fontSize:'.7rem'
+    },
+    '@media (min-width: 640px)':{
+        button:{
+            height:'50px',
+        },
+        container:{
+            width:'30px',
+            height:'30px',
+        },
+        text:{
+            fontSize: '1.2rem',
+            fontWeight:'700',
+        }
     }
 });
 

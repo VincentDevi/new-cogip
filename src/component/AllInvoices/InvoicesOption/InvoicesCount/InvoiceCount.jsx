@@ -11,12 +11,23 @@ const useStyle= createUseStyles({
     text:{
         fontSize:'0.7rem',
     },
+    title:{
+
+    },
+    '@media (min-width:640px)':{
+        text:{
+            fontSize:'.9rem'
+        },
+        title:{
+            fontSize:'2rem',
+        }
+    }
 });
 export const InvoicesCount = () =>{
     const style =useStyle();
     return (
         <div className={style.section}>
-            <h2>Invoices</h2>
+            <h2 className={style.title}>Invoices</h2>
             <p className={style.text}>7 invoices</p>
         </div>
     );

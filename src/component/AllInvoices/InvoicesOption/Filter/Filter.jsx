@@ -17,6 +17,15 @@ const useStyle = createUseStyles({
         display:'flex',
         justifyContent:'center',
         alignItems:'center'
+    },
+    image:{},
+    '@media (min-width:640px)':{
+        text:{
+            fontSize:'1.2rem',
+        },
+        image:{
+            width:'20px',
+        },
     }
     
 })
@@ -26,7 +35,7 @@ export const Filter = () =>{
         <div className={style.section}>
             <p className={style.text}>Filter</p>
             <div className={style.container}>
-                <img src="public/icon-arrow-down.svg" alt="more" />
+                <img className={style.image} src="public/icon-arrow-down.svg" alt="more" />
             </div>
         </div>
     );
