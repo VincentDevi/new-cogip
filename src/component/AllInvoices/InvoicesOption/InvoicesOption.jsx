@@ -23,6 +23,11 @@ const useStyle= createUseStyles({
         display:'flex',
         alignItems:'center',
         justifyContent:'space-between',
+    },
+    '@media(min-width:640px)':{
+        section:{
+            width:'90vw',
+        },
     }
 })
 export const InvoicesOption = () =>{

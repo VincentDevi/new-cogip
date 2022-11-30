@@ -20,11 +20,14 @@ const useStyle = createUseStyles({
     },
     image:{},
     '@media (min-width:640px)':{
+        section:{
+            justifyContent:'space-between',
+        },
         text:{
-            fontSize:'1.2rem',
+            fontWeight:'700',
         },
         image:{
-            width:'20px',
+            width:'10px',
         },
     }
     

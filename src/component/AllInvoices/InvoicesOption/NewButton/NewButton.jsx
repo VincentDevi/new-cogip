@@ -21,7 +21,10 @@ const useStyle = createUseStyles({
         alignItems:'center',
         justifyContent:'center',
     },
-    image:{},
+    image:{
+        width:'100%',
+        height:'auto',
+    },
     text:{
         fontSize:'.7rem'
     },
@@ -34,7 +37,6 @@ const useStyle = createUseStyles({
             height:'30px',
         },
         text:{
-            fontSize: '1.2rem',
             fontWeight:'700',
         }
     }
@@ -44,12 +46,10 @@ export const NewButton = () =>{
     const style = useStyle();
     return (
         <div className={style.button}>
-            
             <div className={style.container}>
                 <img src="public/icon-plus.svg" alt="+" />
             </div>
             <p className={style.text}>new</p>
-        
         </div>
     );
 }

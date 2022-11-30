@@ -16,10 +16,9 @@ const useStyle= createUseStyles({
     },
     '@media (min-width:640px)':{
         text:{
-            fontSize:'.9rem'
         },
         title:{
-            fontSize:'2rem',
+            fontSize:'1.5rem',
         }
     }
 });

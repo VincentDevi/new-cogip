@@ -3,9 +3,8 @@ import { createUseStyles } from "react-jss";
 
 const useStyle = createUseStyles({
     button:{
-        alignSelf:'flex-end',
-        height:'40%',
-        width:'80%',
+        height:'20px',
+        width:'80px',
         display:'flex',
         alignItems:'center',
         justifyContent:'center',
@@ -24,6 +23,11 @@ const useStyle = createUseStyles({
         fontWeight:'900',
         fontSize:'.7rem',
     },
+    '@media (min-width:640px)':{
+        button:{
+            alignSelf:'center',
+        },
+    }
 });
 
 export const StatusButton = () =>{
