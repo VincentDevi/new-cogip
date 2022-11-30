@@ -6,7 +6,7 @@ import { NewButton } from "./NewButton/NewButton";
 
 const useStyle= createUseStyles({
     section:{
-        width: '90vw',
+        width: '80vw',
         height:'15vh',
         display:'flex',
         alignItems:'center',

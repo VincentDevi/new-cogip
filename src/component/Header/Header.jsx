@@ -27,6 +27,7 @@ const useStyle = createUseStyles({
         borderBottomRightRadius: '1rem'
     },
     image:{
+        maxWidth: '40px',
         width: '30%',
         height: 'auto',
     }

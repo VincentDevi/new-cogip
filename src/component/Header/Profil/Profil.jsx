@@ -19,6 +19,7 @@ const useStyle = createUseStyles({
         cursor:'pointer',
     },
     image:{
+        maxWidth:'60px',
         width: '100%',
         height:'auto',
         borderRadius:'5rem',

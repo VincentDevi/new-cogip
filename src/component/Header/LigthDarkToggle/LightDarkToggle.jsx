@@ -7,9 +7,12 @@ const useStyle = createUseStyles({
         justifyContent:'center',
         alignItems:'center',
         cursor:'pointer', 
+        width:'50%',
+        maxWidth: '80px',
     },
     image:{ 
-        width:'5px',
+        maxWidth: '40px',
+        width:'100%',
         height:'auto',
     }
 

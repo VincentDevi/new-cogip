@@ -17,7 +17,7 @@ export const InvoicesCount = () =>{
     return (
         <div className={style.section}>
             <h2>Invoices</h2>
-            <p className={style.text}>No invoice</p>
+            <p className={style.text}>7 invoices</p>
         </div>
     );
 }

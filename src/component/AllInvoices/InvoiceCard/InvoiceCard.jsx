@@ -5,7 +5,7 @@ import { StatusButton } from "./StatusButton/StatusButton";
 const useStyle = createUseStyles({
     main:{
         height:'134px',
-        width:'90vw',
+        width:'80vw',
         backgroundColor: '#1E2139',
         borderRadius: '.7rem',
         display:'flex',
