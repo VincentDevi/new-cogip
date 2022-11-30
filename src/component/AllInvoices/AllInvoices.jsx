@@ -21,8 +21,8 @@ export const AllInvoices = () =>{
     return (
         <div className={style.section}>
             <InvoicesOption/>
-            <NoInvoice/>
-            {/* <CardCollection/> */}
+            {/* <NoInvoice/> */}
+            <CardCollection/>
         </div>
     );
 }

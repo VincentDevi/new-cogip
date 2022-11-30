@@ -30,7 +30,7 @@ export const LightDarkToggle = () =>{
 
     return (
         <div className={style.container}>
-            <img className={style.image} src="public/icon-sun.svg" alt="light" />
+            <img className={style.image} src="../public/icon-sun.svg" alt="light" />
         </div>
     );
 }

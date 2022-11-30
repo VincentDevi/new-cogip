@@ -90,7 +90,7 @@ export const Header = () =>{
     return (
         <div className={style.header}>
             <div className={style.logo}>
-                <img className={style.image} src="public/logo.svg" alt="logo" />
+                <img className={style.image} src="../public/logo.svg" alt="logo" />
             </div>
             <div className={style.mode}>
                 <div className={style.toggle}>

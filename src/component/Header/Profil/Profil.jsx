@@ -34,7 +34,7 @@ export const Profil = () =>{
 
     return (
         <div className={style.container}>
-            <img className={style.image} src="public/image-avatar.jpg" alt="profil" />
+            <img className={style.image} src="../public/image-avatar.jpg" alt="profil" />
         </div>
     );
 }
