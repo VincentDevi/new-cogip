@@ -6,6 +6,7 @@ const useStyle = createUseStyles({
     main:{
         height:'40%',
         width: '90%',
+        fontSize:'12px',
     },
     data:{
         height:'60%',
@@ -23,26 +24,19 @@ const useStyle = createUseStyles({
         justifyContent:'center',
         gap:'.5rem',
     },
-    emailTitle:{
-        fontSize:'.7rem',
+    important:{
+        fontSize:'15px',
+        fontWeight:'700'
     },
-    emailAdd:{
-        fontSize:'.8rem',
-        fontWeight:'900'
+    title:{
+        fontSize:'12px',
     },
     to:{
         height:'100%',
         width:'50%',
         display:'flex',
         flexDirection:'column',
-        fontSize:'.7rem',
         gap:'1rem'
-    },
-    name:{
-        fontSize:'.8rem',
-        fontWeight:'900',
-    },
-    title:{
     },
     address:{
         display:'flex',
@@ -60,20 +54,7 @@ const useStyle = createUseStyles({
             display:'flex',
         },
         emailDiv:{
-            width:'40%',
-        },
-        to:{
-            width:'60%',
-            fontSize:'1rem',
-        },
-        name:{
-            fontSize: '1.2rem',
-        },
-        emailTitle:{
-            fontSize:'1rem',
-        },
-        emailAdd:{
-            fontSize:'1.2rem',
+            width:'50%',
         },
     },
 });
@@ -92,7 +73,7 @@ export const InvoiceTo = () =>{
                 <div className={style.to}>
                    <div className={style.person}>
                         <p className={style.title}>bill to</p>
-                        <p className={style.name}>Alex grim</p>
+                        <p className={style.important}>Alex grim</p>
                    </div>
                     <div className={style.address}>
                         <p>84 Church way</p>
@@ -103,8 +84,8 @@ export const InvoiceTo = () =>{
                 </div>
             </div>
             <div className={style.emailDiv}>
-                <p className={style.emailTitle}>sent to</p>
-                <p className={style.emailAdd}>alexgrim@gmail.com</p>
+                <p className={style.title}>sent to</p>
+                <p className={style.important}>alexgrim@gmail.com</p>
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ const useStyle = createUseStyles({
         marginTop:'1rem',
         display:'flex',
         flexDirection:'column',
-        fontSize: '.6rem',
+        fontSize: '11px',
     },
     address:{
         width:'50%',

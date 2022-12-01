@@ -11,14 +11,13 @@ const useStyle= createUseStyles({
         alignItems:'center',
         gap:'.5rem',
         color:'#F8F8FB',
-        fontWeight:'600',
-        fontSize:'.7rem',
+        fontWeight:'700',
+        fontSize:'12px',
     },
     '@media (min-width:640px)':{
         main:{
             width:'100%',
             justifyContent:'flex-end',
-            fontSize: '1rem',
         }
     },
 });

@@ -22,7 +22,7 @@ const useStyle= createUseStyles({
         alignItems:'center',
     },
     text:{
-        fontSize:'.7rem',
+        fontSize:'1rem',
         color:'#858BB2',
     },
     cud:{
@@ -36,9 +36,6 @@ const useStyle= createUseStyles({
             width:'40%',
             justifyContent:'flex-start',
             gap:'1.5rem',
-        },
-        text:{
-            fontSize:'1rem',
         },
         cud:{
             width:'50%',

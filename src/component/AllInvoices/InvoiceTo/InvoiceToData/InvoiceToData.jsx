@@ -7,24 +7,15 @@ const useStyle = createUseStyles({
         width: '50%',
         display:'flex',
         flexDirection:'column',
-        fontSize:'.7rem',
         gap:'1rem'
     },
     title:{
-        
+        fontSize:'12px',
     },
     date:{
-        fontSize:'.8rem',
-        fontWeight:'900'
+        fontSize:'15px',
+        fontWeight:'700'
     },
-    '@media (min-width:640px)':{
-        main:{
-            fontSize:'1rem',
-        },
-        date:{
-            fontSize:'1.2rem',
-        },
-    }
 });
 
 export const InvoiceToData = ({title,date}) =>{

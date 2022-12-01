@@ -62,22 +62,22 @@ const useStyle = createUseStyles({
             position:'fixed',
             flexDirection:'column',
             height:'100vh',
-            width:'5vw',
+            width:'4vw',
         },
         logo:{
             width:'100%',
-            height:'10%',
+            height:'7%',
         },
         mode:{
             height:'20%',
             flexDirection:'column',
         },
         toggle:{
-            width:'5vw',
+            width:'4vw',
             height:'50%',
         },
         prof:{
-            width:'5vw',
+            width:'4vw',
             height:'50%',
             borderTop: '2px solid #494E6E',
             borderLeft:'none',
