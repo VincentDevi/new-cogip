@@ -1,12 +1,14 @@
 import React from "react";
 import { InvoiceCard } from "../AllInvoices/InvoiceCard/InvoiceCard";
+import { useGetAllInvoicesQuery } from "../../features/apiSlice";
+import { Link } from "react-router-dom";
 
 export const CardCollection = () =>{
-    const array=[1,2,3,4,5,6,7,8,9,10];
+    const {data} = useGetAllInvoicesQuery();
     return (
         <>
-        {array.map((index,item)=>{
-            return <InvoiceCard key={index}/>
+        {data&&data.invoices.map((item,index)=>{
+            return <Link> <InvoiceCard data={item} key={index}/> </Link>
         })}
         </>
     );

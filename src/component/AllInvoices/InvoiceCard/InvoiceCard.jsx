@@ -93,6 +93,7 @@ const Main = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
+    cursor: pointer;
     @media (min-width: 640px){
         height:72px;
         width:90vw;
@@ -101,17 +102,18 @@ const Main = styled.div`
         width:45vw;
     }
 ` 
-export const InvoiceCard = () =>{
+export const InvoiceCard = ({data}) =>{
     const style = useStyle();
     const mode = useSelector((state)=> state.darkMode.value)
-  
+    let date = data.due_date
+    date = date.split(":")[0];
     return (
         <Main mode={mode}>
            <div className={style.section}>
-            <p className={style.ref}><span className={style.hash}>#</span>RT3080</p>
-            <p className={style.date}>Due 19 Aug 2021</p>
-            <p className={style.price}>€ 1,800.90</p>
-            <p className={style.name}>Jensen Huang</p>
+            <p className={style.ref}><span className={style.hash}>#</span>{data.ref}</p>
+            <p className={style.date}>Due {date}</p>
+            <p className={style.price}>€ {data.total_price}</p>
+            <p className={style.name}>{data.first_name_contact} {data.last_name_contact}</p>
             <div className={style.button}>
                 <StatusButton/>
             </div>

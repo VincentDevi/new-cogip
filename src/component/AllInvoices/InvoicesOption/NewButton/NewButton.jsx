@@ -35,6 +35,7 @@ const useStyle = createUseStyles({
     text:{
         width:'50%',
         fontSize:'.7rem',
+        color:'#F8F8FB',
     },
     '@media (min-width: 640px)':{
         button:{
