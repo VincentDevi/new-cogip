@@ -1,5 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { useDispatch } from "react-redux";
+import { switchMode } from "../../../features/darkMode";
+import { useSelector } from "react-redux";
 
 const useStyle = createUseStyles({
     container:{
@@ -27,10 +30,13 @@ const useStyle = createUseStyles({
 })
 export const LightDarkToggle = () =>{
     const style = useStyle();
-
+    const dispatch = useDispatch()
+    const mode = useSelector((state)=>state.darkMode.value)
     return (
-        <div className={style.container}>
-            <img className={style.image} src="../public/icon-sun.svg" alt="light" />
+        <div className={style.container} onClick={()=>{
+            dispatch(switchMode())
+        }}>
+            <img className={style.image} src={(mode)?"../public/icon-sun.svg":"../public/icon-moon.svg"} alt="light" />
         </div>
     );
 }

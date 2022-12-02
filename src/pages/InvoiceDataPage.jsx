@@ -6,7 +6,9 @@ import { InvoiceData } from "../component/InvoiceData/InvoiceData";
 const useStyle = createUseStyles({
     main:{
         display: 'flex',
+        height:'100%',
         flexDirection:'column',
+
     },
     '@media (min-width:1024px)':{
         flexDirection:'row',

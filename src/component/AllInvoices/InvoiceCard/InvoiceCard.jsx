@@ -1,20 +1,11 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { StatusButton } from "./StatusButton/StatusButton";
+import {useSelector} from 'react-redux';
+import styled from "styled-components";
 
 const useStyle = createUseStyles({
-    main:{
-        height:'134px',
-        width:'80vw',
-        backgroundColor: '#1E2139',
-        borderRadius: '.7rem',
-        color:'#F8F8FB',
-        fontSize:'.7rem',
-        marginBottom:'1rem',
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center',
-    },
+
     section:{
         height:'90%',
         width:'90%',
@@ -63,10 +54,6 @@ const useStyle = createUseStyles({
         fontWeight:'200',
     },
     '@media (min-width:640px)':{
-        main:{
-            height: '72px',
-            width:'90vw',
-        },
         section:{
             flexDirection:'row',
         },
@@ -94,17 +81,32 @@ const useStyle = createUseStyles({
             order:'4',
         },
     },
-    '@media(min-width:1024px)':{
-        main:{
-            width:'45vw',
-        },
-    }
+ 
 })
-
+const Main = styled.div`
+    height:134px;
+    width:80vw;
+    background-color: ${props=>(props.mode)?'#1E2139':'#FFFFFF'};
+    border-radius: .7rem;
+    font-size:.7rem;
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    @media (min-width: 640px){
+        height:72px;
+        width:90vw;
+    }
+    @media (min-width: 1024px){
+        width:45vw;
+    }
+` 
 export const InvoiceCard = () =>{
     const style = useStyle();
+    const mode = useSelector((state)=> state.darkMode.value)
+  
     return (
-        <div className={style.main}>
+        <Main mode={mode}>
            <div className={style.section}>
             <p className={style.ref}><span className={style.hash}>#</span>RT3080</p>
             <p className={style.date}>Due 19 Aug 2021</p>
@@ -114,6 +116,6 @@ export const InvoiceCard = () =>{
                 <StatusButton/>
             </div>
            </div>
-        </div>
+        </Main>
     );
 }

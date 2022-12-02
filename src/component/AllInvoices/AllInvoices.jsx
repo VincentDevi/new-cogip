@@ -3,26 +3,25 @@ import { createUseStyles } from "react-jss";
 import { CardCollection } from "../CardCollection/CardCollection";
 import { InvoicesOption } from "./InvoicesOption/InvoicesOption";
 import { NoInvoice } from "./NoInvoice/NoInvoice";
+import styled from "styled-components";
 
-const useStyle = createUseStyles({
-    section:{
-        width: '100vw',
-        height: 'auto',
-        backgroundColor:'#141625',
-        display:'flex',
-        flexDirection:'column',
-        justifyContent:'center',
-        alignItems: 'center',
-    },
-});
+const Div = styled.div`
+    width:100vw;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+
 export const AllInvoices = () =>{
-    const style = useStyle();
 
     return (
-        <div className={style.section}>
+        <Div>
             <InvoicesOption/>
             {/* <NoInvoice/> */}
             <CardCollection/>
-        </div>
+        </Div>
     );
 }

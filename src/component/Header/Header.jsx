@@ -2,14 +2,11 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { LightDarkToggle } from "./LigthDarkToggle/LightDarkToggle";
 import { Profil } from "./Profil/Profil";
-
+import styled from "styled-components";
+import { useSelector } from "react-redux";
 const useStyle = createUseStyles({
     header:{
-        width:'100vw',
-        height: '10vh',
-        backgroundColor:'#1E2139',
-        display: 'flex',
-        justifyContent:'space-between'
+     
     },
 
     logo:{
@@ -59,10 +56,7 @@ const useStyle = createUseStyles({
     },
     '@media (min-width:1024px)':{
         header:{
-            position:'fixed',
-            flexDirection:'column',
-            height:'100vh',
-            width:'4vw',
+           
         },
         logo:{
             width:'100%',
@@ -84,11 +78,24 @@ const useStyle = createUseStyles({
         },
     }
 }) 
-
+const HeaderStyle = styled.header`
+    width:100vw;
+    height: 10vh;
+    background-color:${props=> (props.mode)?'#1E2139':'#373B53'};
+    display: flex;
+    justify-content:space-between;
+    @media (min-width: 1024px){
+        position:fixed;
+        flex-direction:column;
+        height:100vh;
+        width:4vw;
+    }
+`
 export const Header = () =>{
     const style =useStyle();
+    const mode = useSelector(state => state.darkMode.value)
     return (
-        <div className={style.header}>
+        <HeaderStyle mode={mode}>
             <div className={style.logo}>
                 <img className={style.image} src="../public/logo.svg" alt="logo" />
             </div>
@@ -101,6 +108,6 @@ export const Header = () =>{
                 </div>
             </div>
 
-        </div>
+        </HeaderStyle>
     );
 }

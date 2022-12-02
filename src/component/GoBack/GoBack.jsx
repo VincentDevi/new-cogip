@@ -7,7 +7,6 @@ const useStyle = createUseStyles({
         width:'90vw',
         display:'flex',
         alignItems:'center',
-        color: '#F8F8FB',
     },
     section:{
         width:'30%',

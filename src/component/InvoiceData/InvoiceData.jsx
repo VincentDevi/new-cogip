@@ -6,6 +6,8 @@ import { InvoiceFrom } from "../InvoiceFrom/InvoiceFrom";
 import { InvoiceTo } from "../AllInvoices/InvoiceTo/InvoiceTo";
 import { InvoiceFooter } from "../invoiceFooter/InvoiceFooter";
 import { TotalAmount } from "../TotalAmount/TotalAmount";
+import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 
 const useStyle = createUseStyles({
@@ -16,7 +18,6 @@ const useStyle = createUseStyles({
         flexDirection:'column',
         alignItems:'center',
         justifyContent:'center',
-        color:'#F8F8FB',
     },
     content:{
         width:'100%',
@@ -26,40 +27,37 @@ const useStyle = createUseStyles({
         justifyContent:'center',
     },
     invoice:{
-        backgroundColor:'#1E2139',
-        width:'90vw',
-        height:'80vh',
-        maxHeight:'695px',
-        borderRadius:'.4rem',
-        marginBottom:'3rem',
-        display:'flex',
-        flexDirection:'column',
-        alignItems:'center',
-        gap:'1rem',
+     
     },
-    '@media (min-width:1024px)':{
-        main:{
-
-        },
-        content:{
-        },
-        invoice:{
-            width:'50vw',
-        }
-    }
 });
+const Invoice = styled.div`
+    background-color:${props=>(props.mode)? '#1E2139':'#FFFFFF'};
+    width:90vw;
+    height:80vh;
+    max-height:695px;
+    border-radius:.4rem;
+    margin-bottom:3rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    @media (min-width: 1024px){
+        width:50vw
+    }
+`
 export const InvoiceData = () =>{
     const style = useStyle();
+    const mode = useSelector(state=>state.darkMode.value)
     return (
         <div className={style.main}>
             <div className={style.content}>
                 <GoBack/>
                 <InvoiceStatus/>
-                <div className={style.invoice}>
+                <Invoice mode={mode}>
                     <InvoiceFrom/>
                     <InvoiceTo/>
                     <TotalAmount/>
-                </div>
+                </Invoice>
                 <InvoiceFooter/>
             </div>
         </div>

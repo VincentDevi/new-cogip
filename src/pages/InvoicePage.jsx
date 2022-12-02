@@ -1,26 +1,24 @@
 import React from "react";
 import { AllInvoices } from "../component/AllInvoices/AllInvoices";
 import { Header } from "../component/Header/Header";
-import { createUseStyles } from "react-jss";
+import {useSelector} from 'react-redux';
+import styled from "styled-components";
 
-const useStyle = createUseStyles({
-    main:{
-        display:'flex',
-        flexDirection:'column'
-    },
-    '@media (min-width:1024px)':{
-        main:{
-            flexDirection:'row',
-        },
+const Div = styled.div`
+    display:flex;
+    flex-direction: column;
+    @media (min-width: 1024px){
+        flex-direction:row;
     }
-});
+` ;
+
 
 export const InvoicePage = () =>{
-    const style = useStyle();
+    const mode = useSelector((state)=> state.darkMode.value);
     return (
-        <div className={style.main}>
+        <Div>
             <Header/>
             <AllInvoices/>
-        </div>
+        </Div>
     );
 }

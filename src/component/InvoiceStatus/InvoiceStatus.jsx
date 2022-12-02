@@ -2,17 +2,12 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { StatusButton } from "../AllInvoices/InvoiceCard/StatusButton/StatusButton";
 import { CudButton } from "../CudButton/CudButton";
+import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 const useStyle= createUseStyles({
     content:{
-        height:'10vh',
-        width:'90vw',
-        backgroundColor:'#1E2139',
-        borderRadius:'.4rem',
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center',
-        marginBottom:'1rem',
+       
     },
     section:{
         width:'80%',
@@ -23,7 +18,6 @@ const useStyle= createUseStyles({
     },
     text:{
         fontSize:'1rem',
-        color:'#858BB2',
     },
     cud:{
         display:'none',
@@ -42,18 +36,26 @@ const useStyle= createUseStyles({
             display:'flex',
         }
     },
-    '@media (min-width: 1024px)':{
-        content:{
-            width:'50vw',
-        }
-    }
 });
-
+const Content = styled.div`
+    height:10vh;
+    width:90vw;
+    background-color:${props=>(props.mode)?'#1E2139': '#FFFFFF'};
+    border-radius:.4rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:1rem;
+    @media (min-width: 1024px){
+        width: 50%;
+    }
+`
 export const InvoiceStatus = () =>{
     const style = useStyle();
+    const mode = useSelector(state=> state.darkMode.value)
 
     return (
-        <div className={style.content}>
+        <Content mode={mode}>
             <div className={style.section}>
                 <p className={style.text}>status</p>
                 <StatusButton/>
@@ -61,7 +63,7 @@ export const InvoiceStatus = () =>{
             <div className={style.cud}>
                 <CudButton/>
             </div>
-    </div>
+    </Content>
     );
 }
 
