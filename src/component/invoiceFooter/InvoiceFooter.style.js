@@ -8,9 +8,9 @@ export const InvoiceFooterStyle = styled.div`
         display:flex;
         align-items:center;
         justify-content:center;
-    },
-    @media (min-width:640px):{
-        footer:{
+    }
+    @media (min-width:640px){
+        footer{
             display:none;
         }
     }
