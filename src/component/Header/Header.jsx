@@ -1,112 +1,19 @@
 import React from "react";
-import { createUseStyles } from "react-jss";
 import { LightDarkToggle } from "./LigthDarkToggle/LightDarkToggle";
 import { Profil } from "./Profil/Profil";
-import styled from "styled-components";
 import { useSelector } from "react-redux";
-const useStyle = createUseStyles({
-    header:{
-     
-    },
+import { Logo } from "./Logo/Logo";
+import { HeaderStyle } from "./Header.style";
 
-    logo:{
-        backgroundColor:'#7C5DFA',
-        display:'flex',
-        justifyContent:'center',
-        alignItems: 'center',
-        width:'20%',
-        borderTopRightRadius:'1rem',
-        borderBottomRightRadius: '1rem'
-    },
-    image:{
-        maxWidth: '40px',
-        width: '30%',
-        height: 'auto',
-    },
-    mode:{
-        width:'75%',
-        height:'100%',
-        display:'flex',
-        justifyContent:'flex-end',
-    },
-    toggle:{
-        width:'25%',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-    },
-    prof:{
-        width:'30%',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        borderLeft: '2px solid #494E6E'
-    },
-    '@media(min-width:640px)':{
-        logo:{
-            width:'10%',
-            height:'100%',
-        },
-        prof:{
-            width:'20%',
-        },
-        toggle:{
-            width:'15%',
-        },
-    },
-    '@media (min-width:1024px)':{
-        header:{
-           
-        },
-        logo:{
-            width:'100%',
-            height:'7%',
-        },
-        mode:{
-            height:'20%',
-            flexDirection:'column',
-        },
-        toggle:{
-            width:'4vw',
-            height:'50%',
-        },
-        prof:{
-            width:'4vw',
-            height:'50%',
-            borderTop: '2px solid #494E6E',
-            borderLeft:'none',
-        },
-    }
-}) 
-const HeaderStyle = styled.header`
-    width:100vw;
-    height: 10vh;
-    background-color:${props=> (props.mode)?'#1E2139':'#373B53'};
-    display: flex;
-    justify-content:space-between;
-    @media (min-width: 1024px){
-        position:fixed;
-        flex-direction:column;
-        height:100vh;
-        width:4vw;
-    }
-`
 export const Header = () =>{
-    const style =useStyle();
     const mode = useSelector(state => state.darkMode.value)
     return (
         <HeaderStyle mode={mode}>
-            <div className={style.logo}>
-                <img className={style.image} src="../public/logo.svg" alt="logo" />
-            </div>
-            <div className={style.mode}>
-                <div className={style.toggle}>
-                    <LightDarkToggle/>
-                </div>
-                <div className={style.prof}>
-                    <Profil/>
-                </div>
-            </div>
+            <Logo/>
+            <section>
+                <LightDarkToggle/>
+                <Profil/>
+            </section>
 
         </HeaderStyle>
     );

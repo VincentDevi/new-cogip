@@ -17,6 +17,22 @@ const GlobalStyle = createGlobalStyle`
     text-decoration:none;
     color: ${props=> (props.mode)? '#F8F8FB': '#0C0E16'};
   }
+  h1{
+    font-size: 32px;
+    font-weight:700;
+    line-height:36px;
+  }
+  h2{
+    font-size: 20px;
+    font-weight:700;
+    line-height:22px;
+
+  }
+  h3{
+    font-size: 12px;
+    font-weight: 700;
+    line-height:15px;
+  }
 `
 function App() {
 
